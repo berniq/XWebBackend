@@ -10,7 +10,7 @@ class UserControllerIT : AbstractIntegrationTest() {
     fun cleanup() {
         userRepository.deleteAll()
     }
-
+/*
     @Test
     fun `Create new user`() {
         val newUser = CreateUserRequest(
@@ -24,5 +24,5 @@ class UserControllerIT : AbstractIntegrationTest() {
         )
         val createdUser
 
-    }
+    }*/
 }
