@@ -1,0 +1,29 @@
+@userId = d30fe2e9-d161-485b-95b1-ca1054503f7d
+@userName = 2137
+
+### Get user by name
+
+GET http://localhost:8080/users/@{{userName}}
+
+### Get all users
+
+GET http://localhost:8080/users
+
+### Get users at page xxx and size zzz
+@page = 1
+@size = 5
+
+GET http://localhost:8080/users?page={{page}}&size={{size}}
+
+### Get a specific user by ID
+
+GET http://localhost:8080/users/{{userId}}
+
+### Update username for a specific user
+
+PUT http://localhost:8080/users/{{userId}}
+Content-Type: application/json
+
+{
+  "username": "2137"
+}

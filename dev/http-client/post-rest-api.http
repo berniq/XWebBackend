@@ -1,0 +1,35 @@
+@userId = 8df74f12-55ba-4c7e-bed0-bf2e20f8a411
+
+### Create a new post
+
+POST http://localhost:8080/users/{{userId}}/posts
+Content-Type: application/json
+
+{
+  "content": "Hello, this is my xd post!"
+}
+
+### Get posts of the user
+
+GET http://localhost:8080/users/{{userId}}/posts
+
+### Get posts of the user at page xxx and size zzz
+@page = 1
+@size = 5
+
+GET http://localhost:8080/users/{{userId}}/posts?page={{page}}&size={{size}}
+
+### Update post content for the postId with the content
+@postId = e326a42a-0ff0-40e9-a208-3221547781af
+
+PATCH http://localhost:8080/users/{{userId}}/posts/{{postId}}
+Content-Type: application/json
+
+{
+  "content": "this is my third post updated"
+}
+
+### Delete a post
+@wrongPostId = e326a42a-0ff0-40e9-a208-322154778666
+
+DELETE http://localhost:8080/users/{{userId}}/posts/{{wrongPostId}}

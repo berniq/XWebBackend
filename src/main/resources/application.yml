@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: project-x
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: example
+    password: example
+server:
+  error:
+    include-message: always

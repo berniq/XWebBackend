@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: populated-by-test-setup
+    username: pg-test-username
+    password: pg-test-username
